@@ -1,8 +1,15 @@
-# React + Vite
+# Search movies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a website to search for a movie by name.
 
-Currently, two official plugins are available:
+You are free to fork this project and edit wherever you want.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To download it only open a terminal and type:  
+`
+git clone https://github.com/roilanrodriguez55/movie-web.git`
+
+then you must install all dependencies that is required, React and Axios:
+```
+cd movie-web
+npm install
+```
