@@ -1,0 +1,37 @@
+.search {
+    width: 50vw;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    border: solid 0.2px grey;
+    padding: 10px;
+    background-color: #fefeeb;
+    color: #4e3f30;
+    font-family: "Playwrite IS", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+select {
+    padding: 10px;
+    background-color: #fefeeb;
+    border: solid 0.2px grey;
+    outline: none;
+    color: #4e3f30;
+    font-family: "Playwrite IS", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+option {
+    background-color: #fefeeb;
+}

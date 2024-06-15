@@ -1,0 +1,26 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    background-color: #f8f4e4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Playwrite IS", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 80px;
+    color: #4e3f30;
+}
