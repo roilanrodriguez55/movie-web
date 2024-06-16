@@ -1,38 +1,40 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import "../styles/MediaCard-styles.css"
 
-function MediaCard({ title, setHistorial, historial,setMovie,movie }) {
-
+function MediaCard({ title, setHistorial, historial, setMovie, movie }) {
   useEffect(() => {
-    const fetchMovieByName = async () => {
-      const APIKEY = "e03b7495"
-      let URL = `http://www.omdbapi.com/?t=${title}&apikey=${APIKEY}`
-      const res = await axios.get(URL)
-      const { Title, Year, Director, Actors, Poster, imdbID, Language, Plot } =
-        await res.data
-
-        const result = {
-          title: Title,
-          year: Year,
-          director: Director,
-          actors: Actors,
-          poster: Poster,
-          id: imdbID,
-          lang: Language,
-          description: Plot,
-        }
-
-      setMovie(result)
-      if (Title) {
-        addHistorial(result)
-      }
-    }
     fetchMovieByName()
   }, [title])
 
+  async function fetchMovieByName() {
+    const APIKEY = "e03b7495"
+    try {
+      const res = await axios.get(`http://www.omdbapi.com/?t=${title}&apikey=${APIKEY}`)
+      const { Title, Year, Director, Actors, imdbID, Poster, Language, Plot } =
+        await res.data
+
+      const result = {
+        title: Title,
+        year: Year,
+        director: Director,
+        actors: Actors,
+        poster: Poster,
+        imdbID,
+        lang: Language,
+        description: Plot,
+      }
+
+      if (Title) {
+        setMovie(result)
+        addHistorial(result)
+      }
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
   function addHistorial(movie) {
-    // Aqui aplicar la logica para add al historial de la bd
     setHistorial([...historial, movie])
   }
 

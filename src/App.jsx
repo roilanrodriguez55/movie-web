@@ -4,11 +4,13 @@ import Search from "./components/Search"
 import "./styles/App-styles.css"
 import MenuBtn from "./components/MenuBtn"
 import Historial from "./components/Historial"
+
 function App() {
   const [title, setTitle] = useState("")
   const [historial, setHistorial] = useState([])
   const [showHistorial, setShowHistorial] = useState(false)
   const [movie, setMovie] = useState({})
+
   return (
     <main>
       <h1>Search movies</h1>

@@ -14,7 +14,7 @@ function Search({ setTitle}) {
       <input
         className="search"
         type="text"
-        placeholder="Search movie"
+        placeholder="Search"
         ref={movie}
       />
     </form>
