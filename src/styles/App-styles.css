@@ -8,6 +8,7 @@
 
 body {
     background-color: #f8f4e4;
+    height: 130vh;
 }
 
 main {
@@ -23,4 +24,5 @@ h1 {
     font-size: 30px;
     line-height: 80px;
     color: #4e3f30;
+    margin-top: 40px;
 }

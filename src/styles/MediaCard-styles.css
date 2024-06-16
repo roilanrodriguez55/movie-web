@@ -1,6 +1,7 @@
 .media-card {
-  width: 500px;
-  padding: 20px;
+  width: 40vw;
+  min-width: 260px;
+  padding: 20px 5px;
   background-color: #4e3f30;
   color: #fefeeb;
   transition: ease 0.5s;
@@ -8,16 +9,21 @@
   -moz-transition: ease 0.5s;
   -ms-transition: ease 0.5s;
   -o-transition: ease 0.5s;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  box-shadow: 5px 10px 10px #4e3f30;
+}
+
+h2 {
+  padding: 0 10px;
 }
 
 .poster-container {
@@ -32,6 +38,8 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  user-select: none;
+  aspect-ratio: 12/16;
 }
 
 .media-card p {

@@ -2,8 +2,7 @@ import axios from "axios"
 import React, { useEffect, useState } from "react"
 import "../styles/MediaCard-styles.css"
 
-function MediaCard({ title }) {
-  const [movie, setMovie] = useState({})
+function MediaCard({ title, setHistorial, historial,setMovie,movie }) {
 
   useEffect(() => {
     const fetchMovieByName = async () => {
@@ -13,19 +12,29 @@ function MediaCard({ title }) {
       const { Title, Year, Director, Actors, Poster, imdbID, Language, Plot } =
         await res.data
 
-      setMovie({
-        title: Title,
-        year: Year,
-        director: Director,
-        actors: Actors,
-        poster: Poster,
-        id: imdbID,
-        lang: Language,
-        description: Plot,
-      })
+        const result = {
+          title: Title,
+          year: Year,
+          director: Director,
+          actors: Actors,
+          poster: Poster,
+          id: imdbID,
+          lang: Language,
+          description: Plot,
+        }
+
+      setMovie(result)
+      if (Title) {
+        addHistorial(result)
+      }
     }
     fetchMovieByName()
   }, [title])
+
+  function addHistorial(movie) {
+    // Aqui aplicar la logica para add al historial de la bd
+    setHistorial([...historial, movie])
+  }
 
   return (
     <div className="media-card">

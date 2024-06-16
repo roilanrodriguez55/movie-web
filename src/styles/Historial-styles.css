@@ -1,0 +1,75 @@
+.historial {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  color: #fefeeb;
+  background-color: #4e3f30;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.exit-btn {
+  width: 30px;
+  height: 30px;
+  color: #4e3f30;
+  background-color: #fefeeb;
+  border: 2px solid #4e3f30;
+  border-radius: 5px;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit-btn:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  user-select: none;
+}
+
+.h-item {
+  width: 100%;
+  border: 1px solid #fefeeb;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+
+.h-item:hover {
+  background-color: #fefeeb;
+  color: #4e3f30;
+  cursor: pointer;
+}
+
+@media screen and (width<= 315px) {
+  .historial {
+    width: 80%;
+  }
+}
