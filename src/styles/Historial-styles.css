@@ -10,6 +10,7 @@
   font-optical-sizing: auto;
   font-style: normal;
   padding: 5px;
+  border-left: 1px #fefeeb solid;
 }
 
 h2 {

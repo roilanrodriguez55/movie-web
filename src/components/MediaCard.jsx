@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect } from "react"
 import "../styles/MediaCard-styles.css"
+import { AnimatePresence, motion } from "react-magic-motion"
 
 function MediaCard({ title, setHistorial, historial, setMovie, movie }) {
   useEffect(() => {
@@ -39,10 +40,15 @@ function MediaCard({ title, setHistorial, historial, setMovie, movie }) {
   }
 
   return (
-    <div className="media-card">
-      <h2>Resultados</h2>
-      {movie.title ? (
-        <>
+    <AnimatePresence>
+      {movie.title && (
+        <motion.div
+          className="media-card"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <h2>Resultados</h2>
           <div className="poster-container">
             <img src={movie.poster} alt="" width={150} />
           </div>
@@ -52,9 +58,9 @@ function MediaCard({ title, setHistorial, historial, setMovie, movie }) {
           <p>Actors: {movie.actors}</p>
           <p>Language: {movie.lang}</p>
           <p>Description: {movie.description}</p>
-        </>
-      ) : ""}
-    </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 
