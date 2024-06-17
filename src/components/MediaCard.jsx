@@ -11,7 +11,7 @@ function MediaCard({ title, setHistorial, historial, setMovie, movie }) {
   async function fetchMovieByName() {
     const APIKEY = "e03b7495"
     try {
-      const res = await axios.get(`http://www.omdbapi.com/?t=${title}&apikey=${APIKEY}`)
+      const res = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=${APIKEY}`)
       const { Title, Year, Director, Actors, imdbID, Poster, Language, Plot } =
         await res.data
 
