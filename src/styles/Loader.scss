@@ -1,0 +1,12 @@
+$my-brand-color: #4e3f30; // Reemplaza esto con el color de tu marca
+$primary-color: $my-brand-color;
+
+@import 'loaders.css/src/animations/ball-pulse.scss';
+
+.loader-hidden {
+  display: none;
+}
+
+.loader-active {
+  display: block;
+}
