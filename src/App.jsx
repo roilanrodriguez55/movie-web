@@ -4,16 +4,12 @@ import Search from "./components/Search"
 import "./styles/App-styles.css"
 import MenuBtn from "./components/MenuBtn"
 import Historial from "./components/Historial"
-import { MagicMotion } from "react-magic-motion"
 
 function App() {
   const [title, setTitle] = useState("")
   const [historial, setHistorial] = useState([])
   const [showHistorial, setShowHistorial] = useState(false)
   const [movie, setMovie] = useState({})
-  // const [blur, setBlur] = useState({
-  //   filter: blur("10px")
-  // })
 
   return (
     <>
