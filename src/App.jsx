@@ -10,6 +10,7 @@ function App() {
   const [historial, setHistorial] = useState([])
   const [showHistorial, setShowHistorial] = useState(false)
   const [movie, setMovie] = useState({})
+  const [textSearch, setTextSearch] = useState("")
 
   return (
     <>
@@ -23,7 +24,7 @@ function App() {
       }>
         <h1>Search movies</h1>
         <MenuBtn historial={historial} showHistorial={showHistorial} setShowHistorial={setShowHistorial} />
-        <Search setTitle={setTitle} />
+        <Search setTitle={setTitle} textSearch={textSearch} setTextSearch={setTextSearch} />
         <MediaCard setMovie={setMovie} movie={movie} title={title} setHistorial={setHistorial} historial={historial} />
         {
           showHistorial ?
@@ -31,7 +32,7 @@ function App() {
             ""
         }
       </main>
-      <Historial setMovie={setMovie} movie={movie} historial={historial} showHistorial={showHistorial} setShowHistorial={setShowHistorial} />
+      <Historial setMovie={setMovie} movie={movie} historial={historial} showHistorial={showHistorial} setShowHistorial={setShowHistorial} setTextSearch={setTextSearch} />
     </>
   )
 }
