@@ -61,12 +61,14 @@ function MediaCard({ title, setHistorial, historial, setMovie, movie }) {
             <div className="poster-container">
               <img src={movie.poster} alt="" width={150} />
             </div>
-            <p className="media-card__title">{movie.title}</p>
-            <p className="media-card__year">{movie.year} </p>
-            <p>Director: {movie.director} </p>
-            <p>Actors: {movie.actors}</p>
-            <p>Language: {movie.lang}</p>
-            <p>Description: {movie.description}</p>
+            <h3 className="media-card__title">{movie.title}</h3>
+            <h3 className="media-card__year">{movie.year} </h3>
+            <div className="details-container">
+              <p>Director: {movie.director} </p>
+              <p>Actors: {movie.actors}</p>
+              <p>Language: {movie.lang}</p>
+              <p>Description: {movie.description}</p>
+            </div>
           </motion.div>
         )
       )}

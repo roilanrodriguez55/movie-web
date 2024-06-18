@@ -5,6 +5,7 @@ import { MdOutlineExitToApp } from "react-icons/md"
 function Historial({ historial, showHistorial, setShowHistorial, setMovie }) {
   async function handleOnClickItem(e, film) {
     setMovie(film)
+    setShowHistorial(false)
   }
   return (
     <AnimatePresence>

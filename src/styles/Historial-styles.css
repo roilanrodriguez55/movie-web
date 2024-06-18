@@ -11,6 +11,9 @@
   font-style: normal;
   padding: 5px;
   border-left: 1px #fefeeb solid;
+  z-index: 20;
+  filter: blur(0);
+  -webkit-filter: blur(0);
 }
 
 h2 {

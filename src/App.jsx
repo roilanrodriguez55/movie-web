@@ -11,15 +11,32 @@ function App() {
   const [historial, setHistorial] = useState([])
   const [showHistorial, setShowHistorial] = useState(false)
   const [movie, setMovie] = useState({})
+  // const [blur, setBlur] = useState({
+  //   filter: blur("10px")
+  // })
 
   return (
-    <main>
-      <h1>Search movies</h1>
-      <MenuBtn historial={historial} showHistorial={showHistorial} setShowHistorial={setShowHistorial} />
-      <Search setTitle={setTitle} />
-      <MediaCard setMovie={setMovie} movie={movie} title={title} setHistorial={setHistorial} historial={historial} />
+    <>
+      <main style={
+        showHistorial ?
+          {
+            filter: "blur(10px)",
+            transition: "ease 0.5s"
+          } :
+          {}
+      }>
+        <h1>Search movies</h1>
+        <MenuBtn historial={historial} showHistorial={showHistorial} setShowHistorial={setShowHistorial} />
+        <Search setTitle={setTitle} />
+        <MediaCard setMovie={setMovie} movie={movie} title={title} setHistorial={setHistorial} historial={historial} />
+        {
+          showHistorial ?
+            <div className="blank" onClick={(e) => setShowHistorial(false)}></div> :
+            ""
+        }
+      </main>
       <Historial setMovie={setMovie} movie={movie} historial={historial} showHistorial={showHistorial} setShowHistorial={setShowHistorial} />
-    </main>
+    </>
   )
 }
 

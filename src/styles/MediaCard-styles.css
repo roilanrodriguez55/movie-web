@@ -1,6 +1,7 @@
 .media-card {
-  width: 40vw;
+  width: 80vw;
   min-width: 260px;
+  max-width: 500px;
   padding: 20px 5px;
   background-color: #4e3f30;
   color: #fefeeb;
@@ -19,7 +20,8 @@
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  box-shadow: 5px 10px 10px #4e3f30;
+  box-shadow: 2px 2px 2px #4e3f30;
+  margin-top: 40px;
 }
 
 h2 {
@@ -29,6 +31,8 @@ h2 {
 .poster-container {
   width: 100%;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .media-card img {
@@ -42,19 +46,21 @@ h2 {
   aspect-ratio: 12/16;
 }
 
-.media-card p {
-  margin-top: 5px;
-  width: 100%;
-  padding: 0 20px;
-}
-
 .media-card__title,
 .media-card__year {
   font-size: 25px;
   text-align: center;
   font-weight: bold;
+  width: 100%;
 }
 
-.not-found-movie {
-  margin: 0;
+.details-container {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.media-card .details-container  p {
+  margin-top: 5px;
+  width: 100%;
 }
