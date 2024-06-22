@@ -2,9 +2,10 @@ import { AnimatePresence, motion } from 'react-magic-motion'
 import "../styles/Historial-styles.css"
 import { MdOutlineExitToApp } from "react-icons/md"
 
-function Historial({ historial, showHistorial, setShowHistorial, setMovie }) {
+function Historial({ historial, showHistorial, setShowHistorial, setMovie, setTextSearch }) {
   async function handleOnClickItem(e, film) {
     setMovie(film)
+    setTextSearch(film.title)
     setShowHistorial(false)
   }
   return (
